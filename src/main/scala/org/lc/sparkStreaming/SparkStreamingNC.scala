@@ -19,7 +19,8 @@ object SparkStreamingNC {
     //val errorLines = lines.filter(_.contains("error"))
     //errorLines.print()
     val words = lines.flatMap(line => line.split(" "))
-    val counts = words.map(word => (word,1)).reduceByKey{case (x,y) => x+y}
+    val ones = words.map(word => (word,1))
+    val counts = ones.reduceByKey(_+_)
     counts.print()
 
     ssc.start()
