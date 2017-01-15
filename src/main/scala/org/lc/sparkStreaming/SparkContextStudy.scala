@@ -1,12 +1,12 @@
 package org.lc.sparkStreaming
 
-import org.apache.spark.SparkContext
+import org.apache.spark.{SparkConf, SparkContext}
 
 /**
   * Created by licheng on 1/14/17.
   */
 object SparkContextStudy {
-  SparkConf conf = new
-  SparkContext sc = new SparkContext()
+  val conf = new SparkConf().
+  val sc = new SparkContext()
 
 }
