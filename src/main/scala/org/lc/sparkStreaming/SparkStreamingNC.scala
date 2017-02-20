@@ -13,9 +13,9 @@ import org.apache.spark.streaming.Seconds
 object SparkStreamingNC {
 
   def main(args: Array[String]): Unit = {
-    val conf = new SparkConf().setMaster("spark://localhost:7077").setAppName("FindError")
+    val conf = new SparkConf().setMaster("yarn-cluster").setAppName("FindError")
     val ssc = new StreamingContext(conf,Seconds(2))
-    val lines = ssc.socketTextStream("localhost",7777)
+    val lines = ssc.socketTextStream("192.168.1.217",7777)
     //val errorLines = lines.filter(_.contains("error"))
     //errorLines.print()
     val words = lines.flatMap(line => line.split(" "))
