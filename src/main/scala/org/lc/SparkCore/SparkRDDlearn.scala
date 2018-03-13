@@ -1,7 +1,6 @@
-package org.lc.sparkStreaming
+package org.lc.SparkCore
 
 import org.apache.spark.{SparkConf, SparkContext}
-import org.apache.spark.mllib.classification.ClassificationModel
 
 /**
   * Created by licheng on 2/27/17.
