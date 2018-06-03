@@ -135,6 +135,7 @@
         </plugins>
     </build>
     <reporting>
+        <!--
         <plugins>
             <plugin>
                 <groupId>org.scala-tools</groupId>
@@ -144,5 +145,6 @@
                 </configuration>
             </plugin>
         </plugins>
+        -->
     </reporting>
 </project>

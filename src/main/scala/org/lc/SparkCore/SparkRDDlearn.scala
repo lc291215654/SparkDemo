@@ -1,5 +1,6 @@
 package org.lc.SparkCore
 
+import org.apache.spark.storage.StorageLevel
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
@@ -12,6 +13,8 @@ object SparkRDDlearn {
     val rdd1 = sc.parallelize({
       List((1, 2), (2, 3), (3, 4))
     })
+    rdd1.persist(StorageLevel.DISK_ONLY);
+    rdd1.
     val rdd2 = rdd1.keys
     val rdd3 = rdd1.values
     for (a <- rdd3) {
@@ -19,6 +22,4 @@ object SparkRDDlearn {
       System.out.println("adf")
     }
   }
-
-
 }
